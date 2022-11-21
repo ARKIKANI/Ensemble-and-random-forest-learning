@@ -7,8 +7,12 @@ Ensemble learning is one of the most powerful machine learning techniques that u
 
 
 Type of Ensemble technique
-1) Voting
-2) Bagging and pasting 
-3) Random forest
-4) Boosting 
-5) Stacking
+
+1) Voting   :   A voting ensemble (or a “ majority voting ensemble “)
+
+2) Bagging and pasting : Bagging, also known as bootstrap aggregation.Bagging is used when our objective is to reduce the variance of a decision tree. Here the concept is to create a few subsets of data from the training sample, which is chosen randomly with replacement. Now each collection of subset data is used to prepare their decision trees thus, we end up with an ensemble of various models. The average of all the assumptions from numerous tress is used, which is more powerful than a single decision tree.
+3) 
+4) Random forest
+5) Boosting 
+6) Stacking
+
