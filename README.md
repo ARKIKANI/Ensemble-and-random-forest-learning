@@ -9,7 +9,7 @@ Ensemble learning is one of the most powerful machine learning techniques that u
 
 ## Type of Ensemble technique
 # 1) Voting :  
-              Voting and bagging are similar in that they decide on the final result by combining multiple algorithms, but are different in terms of data sampling method. The diagram below may be able to explain their differences effectively.
+Voting and bagging are similar in that they decide on the final result by combining multiple algorithms, but are different in terms of data sampling method. The diagram below may be able to explain their differences effectively.
 
 # 2) Bagging and pasting : 
 Base model are same in bagging technique but dataset are subset(dataset can be with or without replacement).
