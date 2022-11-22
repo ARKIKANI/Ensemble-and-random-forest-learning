@@ -15,6 +15,14 @@ Types of Bagging technique
 **Random Subspaces:** Here we do column sampling.
 **random paches:** there we do both row and column sampling
 
+
+# Bagging Tips
+
+- Bagging generally gives better results than Pasting
+- Good results come around the 25% to 50% row sampling mark
+- Random patches and subspaces should be used while dealing with high dimensional data
+- To find the correct hyperparameter values we can do GridSearchCV/RandomSearchCV
+
 3) Random forest: this is special bagging technique
 4) Boosting 
 5) Stacking
