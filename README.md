@@ -61,28 +61,75 @@ Advantages of Random Forest
 
 
 
+# Out of bag(OOB) Evaluation
+
+New training sets for multiple decision trees in Random Forest are made using the concept of Bootstrapping, which is basically random sampling with replacement.
+
+![image](https://user-images.githubusercontent.com/110124468/203660377-2c2a6d4a-7514-45e3-9a92-5d26ae64671d.png)
+
+While making the samples, data points were chosen randomly and with replacement, and the data points which fail to be a part of that particular sample are known as OUT-OF-BAG points.
+
+# Out-of-Bag Score (OOB_Score)
+
+Where does OOB_Score come into the picture?? OOB_Score is a very powerful Validation Technique used especially for the Random Forest algorithm for least Variance results.
+
+Note: While using the cross-validation technique, every validation set has already been seen or used in training by a few decision trees and hence there is a leakage of data, therefore more variance.
+But, OOB_Score prevents leakage and gives a better model with low variance, so we use OOB_score for validating the model.
 
 
+Let’s understand OOB_Score through an example:
+
+Here, we have a training set with 5 rows and a classification target variable of whether the animals are domestic/pet?
+
+![image](https://user-images.githubusercontent.com/110124468/203660803-1d1abe52-fea5-4b53-b10f-599a9c247da8.png)
+
+Out of multiple decision trees built in the random forest, a bootstrapped sample for one particular decision tree, say DT_1 is shown below
+
+Here, Rat and Cat data have been left out. And since, Rat and Cat are OOB for DT_1, we would predict the values for Rat and Cat using DT_1. (Note: Data of Rat and Cat hasn’t been seen by DT_1 while training the tree.)
 
 
+![image](https://user-images.githubusercontent.com/110124468/203660846-9055b49a-f7e3-414c-bd11-5cb5971f7e7a.png)
+
+Say 3rd, 7th, and 100th decision trees also had Rat as an OOB datapoint, which means “Rat” data wasn’t seen by any of them, before predicting the value for Rat.
+
+So, we recorded all the predicted values for “Rat” from the trees DT_1, Dt_3, DT_7, and DT_100.
+
+And saw that aggregated/majority prediction is the same as the actual value for “Rat”.
+(To Note: None of the models had seen data before, and still predicted the values for a data point correctly)
+
+![image](https://user-images.githubusercontent.com/110124468/203660961-427cfdf5-efce-4559-92b5-fcce96750ea9.png)
+
+Similarly, every data point is passed for prediction to trees where it would be behaving as OOB and an aggregated prediction is recorded for each row.
+
+Note: The OOB_score is computed as the number of correctly predicted rows from the out-of-bag sample.
+
+OOB Error is the number of wrongly classifying the OOB Sample.
+
+![image](https://user-images.githubusercontent.com/110124468/203661053-986352bf-509c-478f-9bc9-e74a7346e035.png)
 
 
+ Advantages of using OOB_Score:
+No leakage of data: Since the model is validated on the OOB Sample, which means data hasn’t been used while training the model in any way, so there isn’t any leakage of data and henceforth ensures a better predictive model.
+Less Variance :  [More Variance ~ Overfitting due to more training score and less testing score]. Since OOB_Score ensures no leakage, so there is no over-fitting of the data and hence least variance.
+Better Predictive Model: OOB_Score helps in the least variance and hence it makes a much better predictive model than a model using other validation techniques.
+Less Computation: It requires less computation as it allows one to test the data as it is being trained.
 
 
+ Disadvantages of using OOB_Error :
+Time Consuming:  The method allows to test the data as it is being trained, but the overall process is a bit time-consuming as compared to other validation techniques.
+Not good for Large Datasets: As the process can be a bit time-consuming in comparison with the other techniques, so if the data size is huge, it may take a lot more time while training the model.
+Best for Small and medium-size datasets: Even if the process is time-consuming, but if the dataset is medium or small sized, OOB_Score should be preferred over other techniques for a much better predictive model.
 
 
+End Notes !!
+Random Forest can be a very powerful technique for predicting better values if we use the OOB_Score technique. Even if OOB_Score takes a bit more time but the predictions are worth the time consumed in training the random forest model with the OOB_Score parameter set as True.
 
 
+# Feature Importance
 
+Feature importance is a score between 0 and 100 assigned to each column (or feature), telling how powerful is that feature in predicting the target variable. Note that we also require that the sum of all features should be 100. 
 
-
-
-
-
-
-
-
-
+In short ,Feature Selection
 
 
 # 4) Boosting 
