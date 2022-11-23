@@ -33,10 +33,57 @@ Diffrence between voting and bagging learning
 ![image](https://user-images.githubusercontent.com/110124468/203420388-43dd541b-6796-4b65-837b-3b0d1cf353bc.png)
 
 
+# 3) Random forest: 
+This is special bagging technique  but has collection of decision trees.
+
+Why use Random Forest?
+Below are some points that explain why we should use the Random Forest algorithm:
+
+It takes less training time as compared to other algorithms.
+It predicts output with high accuracy, even for the large dataset it runs efficiently.
+It can also maintain accuracy when a large proportion of data is missing.
+
+Why use Random Forest?
+
+Below are some points that explain why we should use the Random Forest algorithm:
+
+- It takes less training time as compared to other algorithms.
+- It predicts output with high accuracy, even for the large dataset it runs efficiently.
+- It can also maintain accuracy when a large proportion of data is missing.
+
+![image](https://user-images.githubusercontent.com/110124468/203657715-1da84b82-bbba-4bfb-9e9d-b4f69b9f1c08.png)
+
+
+Advantages of Random Forest
+- Random Forest is capable of performing both Classification and Regression tasks.
+- It is capable of handling large datasets with high dimensionality.
+- It enhances the accuracy of the model and prevents the overfitting issue.
 
 
 
 
-# 3) Random forest: this is special bagging technique
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 4) Boosting 
 # 5) Stacking
