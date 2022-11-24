@@ -133,4 +133,42 @@ In short ,Feature Selection
 
 
 # 4) Boosting 
+
+1- Week Learner : In the model the accuray of our model is less . we can say that near 50 %.
+2) Decision stumps: this is actully a week learner like max_depth in DT is 1.
+3) 1 and -1 , instead 1 or 0
+
+Stagewise
+1) Adaboost: ( Additive methods)
+
+upsampling  increate the importance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=
 # 5) Stacking
